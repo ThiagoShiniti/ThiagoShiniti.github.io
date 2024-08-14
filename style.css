@@ -1,0 +1,138 @@
+body{
+margin:0;
+border:0;
+}
+
+:root{
+    --scroll-height:5px;
+}
+
+cite{
+    font-size: 1rem;
+    margin-inline: auto;
+    text-align: center;
+    display: block;
+}
+.post-header{
+    max-width:100%;
+    margin-top:-10px;
+    display: block;
+    text-align: right;
+    }
+
+.author{
+    display: inline-block;
+    font-size: 1rem;
+    color: grey;
+
+ }
+
+.data{
+    display: inline-block;
+    font-size:1rem;
+    color: rgb(206, 206, 206);
+ 
+
+}
+
+
+.indicador{
+    height: var(--scroll-height);
+    background-color: lightpink;
+    transform-origin: left;
+    inset: 0;
+    position: fixed;
+    z-index: 100;
+    animation: scroll 1ms ease-in-out;
+    animation-timeline: scroll();
+}
+
+h1{
+    font-size:3.0rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-inline: auto;
+    
+}
+
+img{
+    animation: tada 1ms ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% contain 45%;
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+
+section{
+    font-size: 1.5rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:100;
+    line-height: 2.5rem;
+    color:rgb(121, 121, 121);
+    margin-inline: auto;
+    width: min(60ch,100%) ;
+    padding-block: var(--scroll-height);
+
+}
+
+section p {
+    animation: appear 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;   
+    text-indent: 1rem;
+    text-align: justify;
+}
+
+
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        translate: -100vw 0;
+        
+    }
+
+    to{
+        opacity:1;
+        translate: 0 0;
+               
+    }
+}
+
+@keyframes scroll{
+    from{
+        scale:0 1;
+    }
+
+    to{
+        scale:1 1;
+
+    }
+}
+
+@keyframes tada{
+    from{
+        opacity:0;
+        clip-path: inset(50% 20% 50% 20%);
+    }
+    to{
+        opacity:1;
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
+
+footer{
+    height: 250px;
+    font-size: 0.9rem;
+    background-color: lightpink;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px;
+}
+
